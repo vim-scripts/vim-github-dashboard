@@ -1,0 +1,28 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4635
+
+This plugin allows you to browse GitHub events (user dashboard, user/repo activity) in Vim.
+
+Project Home:
+  https://github.com/junegunn/vim-github-dashboard
+
+Requirements:
+  - Ruby support
+  - json_pure or json gem
+
+Commands (with authentication):
+  - :GHDashboard
+  - :GHDashboard USER
+  - :GHActivity
+  - :GHActivity USER
+  - :GHActivity USER/REPO
+
+Commands (without authentication):
+  - :GHDashboard! USER
+  - :GHActivity! USER
+  - :GHActivity! USER/REPO
+
+Navigation:
+  Use Tab and Shift-Tab to navigate back and forth through the links.
+  Press Enter key or double-click on a link to open it in the browser.
+  Press R to refresh the tab.
+  Press q to close the tab.
