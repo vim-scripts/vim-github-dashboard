@@ -1,7 +1,7 @@
 vim-github-dashboard         *vim-github-dashboard* *github-dashboard*
 ======================================================================
 
-Browse GitHub dashboard in Vim.
+Browse GitHub events (user dashboard, user/repo activity) in Vim.
 
   Author:  Junegunn Choi
   Source:  https://github.com/junegunn/vim-github-dashboard
@@ -22,7 +22,8 @@ Shows the dashboard of a user in a new tab.
                                                          *:GHActivity*
                                                         *:GHActivity!*
 
-Shows the activity stream of a user in a new tab.
+Shows the activity stream of a user [USER] or a repository [USER/REPO]
+in a new tab.
 (:GHActivity! does not require authentication)
 
 
@@ -31,8 +32,9 @@ Navigation
 
 Use `Tab` and `Shift-Tab` to navigate back and forth through the links.
 
-Press `Enter` key with the cursor on a link to open the link in the
-default browser.
+Press `Enter` key or double-click on a link to open it in the browser.
+
+Press `R` to refresh the tab.
 
 Press `q` to close the tab.
 
@@ -47,14 +49,16 @@ you will be asked to enter your GitHub username and the password.
 Once it is successfully authenticated, the Vim process will remember
 the credentials and will no more ask for them.
 
-If you don't want to be asked for username and password when running
-the commands, you can set up `g:github_dashboard` variable as follows.
+If you don't want to be asked for username and password, you can set up
+`g:github_dashboard` variable as follows.
 
     let g:github_dashboard = { 'username': 'you', 'password': 'secret' }
 
 Since having plain-text password in your .vimrc is not the most secure
-thing you can do, it is strongly recommended that you put only
-username in your Vim configuration file.
+thing you can do, it is strongly recommended that you don't put password in
+your Vim configuration file.
+
+    let g:github_dashboard = { 'username': 'you' }
 
 In fact, GitHub API allows you to browse dashboard or activity stream
 without authentication, though the hourly rate is limited to 60.
